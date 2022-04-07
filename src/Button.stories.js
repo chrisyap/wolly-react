@@ -18,7 +18,7 @@ function ButtonWrapper(props) {
 }
 
 export default {
-  title: 'Design System/Button',
+  title: 'Wolly Components/Button',
   component: Button,
 };
 
