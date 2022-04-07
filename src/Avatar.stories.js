@@ -2,6 +2,11 @@ import React from 'react';
 
 import { Avatar } from './Avatar';
 
+/**
+- Use an avatar for attributing actions or content to specific users.
+- The user's name should always be present when using Avatar – either printed beside the avatar or in a tooltip.
+**/
+
 export default {
   title: 'Design System/Avatar',
   component: Avatar,
@@ -10,6 +15,11 @@ export default {
       options: ['tiny', 'small', 'medium', 'large'],
       control: { type: 'select' },
     },
+  },
+  parameters: {
+    componentSubtitle:
+      'Displays an image that represents a user or organization',
+    docs: { storyDescription: 'asdsad' },
   },
 };
 
@@ -31,6 +41,12 @@ export const Sizes = (args) => (
 Sizes.args = {
   username: 'Tom Coleman',
   src: 'https://avatars2.githubusercontent.com/u/132554',
+};
+Sizes.parameters = {
+  docs: {
+    // The story now contains a description
+    storyDescription: '4 sizes are supported.',
+  },
 };
 
 export const Initials = (args) => (
