@@ -1,7 +1,7 @@
 {
-  "name": "wolly-react",
+  "name": "@radiyap/wolly-react",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -22,7 +22,8 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "build-storybook-docs": "build-storybook  --docs",
-    "chromatic": "npx chromatic --project-token=e8d5ebf34792"
+    "chromatic": "npx chromatic --project-token=e8d5ebf34792",
+    "release": "auto shipit --base-branch=main"
   },
   "eslintConfig": {
     "extends": [
@@ -79,7 +80,7 @@
     "prettier": "^2.6.2"
   },
   "description": "React design system",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "https://github.com/chrisyap/wolly-react.git",
   "author": "Chris Yap <radiyap@gmail.com>",
   "license": "MIT"
