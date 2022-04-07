@@ -11,15 +11,17 @@
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
     "styled-components": "^5.2.1",
+    "styled-system": "^5.1.5",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env BABEL_ENV=production babel src -d dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
+    "build-storybook-docs": "build-storybook  --docs",
     "chromatic": "npx chromatic --project-token=e8d5ebf34792"
   },
   "eslintConfig": {
@@ -38,7 +40,16 @@
       }
     ]
   },
-  "babel": {},
+  "babel": {
+    "presets": [
+      [
+        "react-app",
+        {
+          "absoluteRuntime": false
+        }
+      ]
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -52,6 +63,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.17.6",
     "@storybook/addon-a11y": "^6.4.20",
     "@storybook/addon-actions": "^6.4.20",
     "@storybook/addon-essentials": "^6.4.20",
@@ -61,7 +73,14 @@
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.4.20",
     "@storybook/testing-library": "^0.0.9",
+    "auto": "^10.36.5",
     "chromatic": "^6.5.3",
+    "cross-env": "^7.0.3",
     "prettier": "^2.6.2"
-  }
+  },
+  "description": "React design system",
+  "main": "index.js",
+  "repository": "https://github.com/chrisyap/wolly-react.git",
+  "author": "Chris Yap <radiyap@gmail.com>",
+  "license": "MIT"
 }
